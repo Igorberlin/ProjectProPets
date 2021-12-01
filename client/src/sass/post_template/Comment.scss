@@ -1,0 +1,17 @@
+@import "./src/sass/variables";
+
+.user-comment {
+    padding-top: 12px;
+    width: 100%;
+    span {
+        font-size: $text12;
+        font-weight: $textBolder;
+        font-family: Montserrat, serif;
+        letter-spacing: 1px;
+    }
+    p {
+        padding-bottom: 10px;
+        padding-top: 5px;
+        font-family: Monserat, serif;
+    }
+}

@@ -1,0 +1,156 @@
+@import "./src/sass/variables.scss";
+
+.add-post {
+    padding: 40px 60px;
+    width: 80%;
+    margin: 0 auto;
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-direction: column;
+    .title {
+        color: $textColor;
+        font-weight: $textBolder;
+        text-align: center;
+    }
+    .label {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    hr {
+        border: none;
+        height: 1px;
+        background-color: lightgray;
+        margin-top: 10px;
+    }
+    p {
+        color: red;
+    }
+    .post-container {
+        margin-top: 20px;
+        .add-post-form {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            .add-photo-fake {
+                position: absolute;
+                bottom: 70px;
+                left: 85px;
+                opacity: 0;
+            }
+
+            span {
+                color: $textColor;
+                font-size: $text10;
+                padding-left: 3px;
+            }
+
+            textarea {
+                border: 1px solid $textColor;
+                resize: none;
+                height: 300px;
+                padding: 10px 15px;
+                &::placeholder {
+                    color: $textGrey;
+                }
+
+                &:focus {
+                    outline-color: #15939b;
+                }
+            }
+
+            input {
+                border: 1px solid $textColor;
+                height: 30px;
+                padding-left: 5px;
+                &::placeholder {
+                    color: $textGrey;
+                }
+
+                &:focus {
+                    outline-color: #15939b;
+                }
+            }
+            .add-photo-btn {
+                border-radius: 20px;
+                padding: 5px 15px;
+                text-align: center;
+                background: $textColor;
+                color: white;
+            }
+
+            .add-photo-section {
+                margin-top: 10px;
+                width: 100%;
+                .add-photo-btn {
+                    margin-right: 10px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                input {
+                    border: none;
+                    background: none;
+                }
+            }
+
+            .form-footer-section {
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                color: $textColor;
+                justify-content: space-between;
+
+                .btn-tmp p {
+                    color: white !important;
+                }
+            }
+            .form-footer-avatar-section {
+                display: flex;
+                align-items: center;
+                .add-post-user-avatar,
+                .user-avatar {
+                    margin-right: 15px;
+                    img {
+                        border-radius: 50%;
+                        height: 50px;
+                        width: 50px;
+                        border: 1px solid white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .add-post {
+        width: 100%;
+    }
+    .add-post .title {
+        font-size: $text16;
+    }
+}
+
+@media screen and (max-width: 696px) {
+    .add-post {
+        width: 100%;
+
+        .post-container .add-post-form .form-footer-section {
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .add-post .post-container .add-post-form .add-photo-section {
+        display: flex;
+        flex-direction: column;
+        .add-photo-btn {
+            align-self: center;
+            padding: 10px;
+        }
+    }
+    .content .add-post {
+        padding: 40px 20px;
+    }
+}

@@ -1,0 +1,175 @@
+@import "../../sass/form_template/form.scss";
+@import "../../sass/variables.scss";
+#user-form {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 100px;
+    .user-form-title {
+        background-color: $btn;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    h3 {
+        color: $textColor;
+        align-self: center;
+        margin-bottom: 10px;
+    }
+    hr {
+        margin-bottom: 30px;
+    }
+    h2 {
+        color: $whiteText;
+    }
+    .user-form-header {
+        display: flex;
+        flex-direction: row;
+        padding-top: 20px;
+        width: 100%;
+        .user-form-avatar {
+            width: 15%;
+            padding-right: 20px;
+            img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+        .user-form-full-name {
+            display: flex;
+
+            .user-full-name {
+                border: none;
+                color: $textColor;
+                font-size: $text16;
+                font-weight: $textBolder;
+                outline: none;
+            }
+        }
+        .user-form-edit-btn {
+            width: 10%;
+            background: none;
+            border: none;
+            &:hover {
+                cursor: pointer;
+            }
+            svg {
+                color: gray;
+            }
+        }
+    }
+    .user-profile-form {
+        @include formControl;
+        display: flex;
+        flex-direction: column;
+        .form-item-email {
+            p {
+                color: red;
+                margin-left: 50px;
+            }
+            input {
+                margin-left: 15px;
+                width: 90%;
+            }
+            label {
+                font-size: $text12;
+                color: $darkText;
+            }
+        }
+        .form-item {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            align-items: center;
+
+            label {
+                padding-top: 15px;
+                font-size: $text12;
+                color: $darkText;
+            }
+
+            input {
+                width: 100%;
+            }
+
+            .avatar-container {
+                position: relative;
+                width: 100%;
+                .hide-input {
+                    position: absolute;
+                    opacity: 0;
+                    left: -115px;
+                }
+                input {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                .avatar-hide-input {
+                    width: 100%;
+                }
+            }
+        }
+        .form-body {
+            display: grid;
+            grid-template-columns: 1fr 100px;
+
+            .form-body-items {
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .form-body-pet-img {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .user-pet-avatar {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .user-pet-avatar img {
+                    border-radius: 50%;
+                    width: 75px;
+                    height: 75px;
+                }
+                .user-pet-photo {
+                    width: 100%;
+                    margin: 0 auto;
+                    svg {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .form-footer {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 50px;
+    }
+}
+@media screen and (max-width: 1330px) {
+    #user-form {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1040px) {
+    #user-form .user-profile-form .form-item-email label {
+        width: 40px;
+        font-size: $text10;
+    }
+    #user-form .user-profile-form .form-item label {
+        font-size: $text10;
+        width: 40px;
+    }
+}
+@media screen and (max-width: 905px) {
+    #user-form h3 {
+        font-size: $text16;
+        text-align: center;
+    }
+}

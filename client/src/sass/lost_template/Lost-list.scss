@@ -1,0 +1,40 @@
+@import "../variables.scss";
+
+.lost-container {
+    width: 70%;
+    margin: 30px auto;
+
+    .lost-title {
+        color: $textColor;
+        font-weight: $textBolder;
+        font-size: $text16;
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    .lost-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-content: space-between;
+        align-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .lost-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .lost-container .lost-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 660px) {
+    .lost-container .lost-list {
+        grid-template-columns: 1fr;
+    }
+}

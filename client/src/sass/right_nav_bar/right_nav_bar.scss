@@ -1,0 +1,128 @@
+@import "./../variables";
+
+.right-nav-bar {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 30px;
+
+    .right-nav-user {
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 20px 30px 20px 0;
+        width: fit-content;
+
+        .user-profile-btn {
+            display: flex;
+            align-items: center;
+            color: $whiteText;
+
+            h4 {
+                font-size: 0.9rem;
+                margin-left: 10px;
+                font-weight: 200;
+                font-family: Montserrat, sans-serif;
+                letter-spacing: 1px;
+
+                &:hover {
+                    color: #15939b;
+                }
+            }
+        }
+    }
+
+    .user-logout-btn {
+        display: block;
+        color: $whiteText;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-family: Montserrat, sans-serif;
+
+        &:hover {
+            color: #15939b;
+        }
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+
+    #upBtn {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        bottom: 30px;
+        width: 40px;
+        height: 30px;
+        transition: all 0.5s ease-in-out;
+        opacity: 0;
+
+        .arrows-box {
+            border: 1px solid #3deaea;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+            .arrowUp1,
+            .arrowUp2,
+            .arrowUp3 {
+                color: #3deaea;
+                animation-name: first;
+                animation-duration: 5s;
+
+                animation-iteration-count: infinite;
+
+                @keyframes first {
+                    0% {
+                        opacity: 0;
+                    }
+                    25% {
+                        opacity: 0.25;
+                    }
+                    50% {
+                        opacity: 0.5;
+                    }
+                    75% {
+                        opacity: 0.75;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.user-avatar {
+    border: 1px solid snow;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    svg {
+        height: 25px;
+        width: 25px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 660px) {
+    .right-nav-bar #upBtn {
+        right: -5px;
+        width: 30px;
+    }
+    .arrows-box {
+        width: 50%;
+    }
+}

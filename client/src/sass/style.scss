@@ -1,0 +1,28 @@
+@import "./libs";
+@import "./form_template/form";
+@import "./fonts";
+@import "./MainPage.scss";
+@import './button_template/button.scss';
+@import './loader/loader.scss';
+@import './left_nav_bar/left_nav_bar.scss';
+@import './right_nav_bar/right_nav_bar.scss';
+@import "./home/home.scss";
+@import "./services/add-service.scss";
+@import "./services/services.scss";
+@import "./found/found.scss";
+@import "./responsive_style/responsive.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
